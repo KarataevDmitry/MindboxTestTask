@@ -10,7 +10,11 @@ namespace ShapeLibrary.Shapes
 {
     public class Circle:IShape
     {
-        public Circle(double radius) { Radius = radius; }
+        public Circle(double radius) 
+        {
+            if (radius < 0) throw new CircleRadiusShouldBePositiveException();
+            Radius = radius; 
+        }
 
         public double Radius { get; }
 

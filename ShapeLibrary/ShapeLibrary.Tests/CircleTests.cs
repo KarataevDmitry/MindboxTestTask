@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using ShapeLibrary.Shapes;
+using ShapeLibrary.Exceptions;
 
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,11 @@ namespace ShapeLibrary.Tests
         {
             Circle c = new(2);
             Assert.AreEqual(4 * Math.PI, c.CalculateArea());
+        }
+        [TestMethod]
+        public void GivenACircleWithNegativeRadiusWhenConstructThenExceptionTrown()
+        {
+            Assert.ThrowsException<CircleRadiusShouldBePositiveException>(() => new Circle(-3));
         }
     }
 }
