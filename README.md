@@ -16,6 +16,7 @@
 
 ```mssql
 select p.name, c.name
-from Categories c
-right join ProductCategories pc on p.Id = pc.ProductId 
+from Product p
+right join ProductCategories pc on p.Id = pc.ProductId
+join Category c on pc.CateogoryId = c.Id 
 ```
