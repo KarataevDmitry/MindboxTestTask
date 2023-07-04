@@ -1,4 +1,5 @@
-﻿using ShapeLibrary.Interfaces;
+﻿using ShapeLibrary.Exceptions;
+using ShapeLibrary.Interfaces;
 
 using System;
 using System.Collections.Generic;
