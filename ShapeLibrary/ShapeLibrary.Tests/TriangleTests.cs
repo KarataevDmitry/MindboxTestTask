@@ -1,5 +1,3 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using ShapeLibrary.Exceptions;
 using ShapeLibrary.Shapes;
 
@@ -17,7 +15,7 @@ namespace ShapeLibrary.Tests
         [TestMethod]
         public void GivenTriangleWithSides_3_4_5_ThenShouldBeARightTriangle()
         {
-            Triangle t = new Triangle(3, 4, 5);
+            Triangle t = new(3, 4, 5);
             Assert.IsTrue(t.IsRightTriangle());
         }
         [TestMethod]

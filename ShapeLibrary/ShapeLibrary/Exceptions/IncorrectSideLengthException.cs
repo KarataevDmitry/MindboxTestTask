@@ -3,7 +3,7 @@
 namespace ShapeLibrary.Exceptions
 {
     [Serializable]
-    internal class IncorrectSideLengthException : Exception
+    public class IncorrectSideLengthException : Exception
     {
         public IncorrectSideLengthException()
         {

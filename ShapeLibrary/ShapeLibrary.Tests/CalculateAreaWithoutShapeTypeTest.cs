@@ -1,13 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-using ShapeLibrary.Interfaces;
+﻿using ShapeLibrary.Interfaces;
 using ShapeLibrary.Shapes;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShapeLibrary.Tests
 {
@@ -18,7 +10,7 @@ namespace ShapeLibrary.Tests
         [TestMethod]
         public void GivenAListOfTriangle_3_4_5AndCircleWithRadius_2WhenCalculateAreaThenShouldBe6And4Pi()
         {
-           List<IShape> shapesList = new List<IShape>() { new Triangle(3,4,5), new Circle(2) };
+           List<IShape> shapesList = new() { new Triangle(3,4,5), new Circle(2) };
            CollectionAssert.AreEqual( new List<double>() {6, 4*Math.PI }, shapesList.Select(s => s.CalculateArea()).ToList());
         }
     }
