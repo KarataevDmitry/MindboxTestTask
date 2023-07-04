@@ -31,5 +31,13 @@ namespace ShapeLibrary.Tests
         {
             Assert.ThrowsException<NotATriangleException>(() => new Triangle(5, 8, 13));
         }
+        [TestMethod]
+        public void TriangleWithNegativeSidesShouldThrowException()
+        {
+            Assert.ThrowsException<IncorrectSideLengthException>(() => new Triangle(-3, 5, 2));
+            Assert.ThrowsException<IncorrectSideLengthException>(() => new Triangle(3, -5, 2));
+            Assert.ThrowsException<IncorrectSideLengthException>(() => new Triangle(3, 5, -2));
+            Assert.ThrowsException<IncorrectSideLengthException>(() => new Triangle(-3, -5, -2));
+        }
     }
 }

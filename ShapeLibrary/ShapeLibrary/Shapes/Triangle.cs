@@ -20,11 +20,27 @@ namespace ShapeLibrary.Shapes
         /// <param name="length3">length of third side</param>
         public Triangle(double length1, double length2, double length3)
         {
+            ValidateInput(length1, length2, length3);
             Length1 = length1;
             Length2 = length2;
             Length3 = length3;
             CheckTriangleExistance();
         }
+
+        private void ValidateInput(double length1, double length2, double length3)
+        {
+            void CheckSide(double sideLength, string sideName)
+            {
+                if (sideLength < 0)
+                    throw new IncorrectSideLengthException(sideName);
+            }
+            CheckSide(length1);
+            CheckSide(length2);
+            CheckSide(length3);
+
+         
+        }
+
 
         private void CheckTriangleExistance()
         {
