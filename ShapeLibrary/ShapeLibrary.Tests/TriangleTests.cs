@@ -10,7 +10,7 @@ namespace ShapeLibrary.Tests
         public void GivenATriangleWithSides_3_4_5_WhenCalculateAreaThenShouldBe6()
         {
             var t = new Triangle(3, 4, 5);
-            Assert.AreEqual( t.CalculateArea(), 6);
+            Assert.AreEqual(t.CalculateArea(), 6);
         }
         [TestMethod]
         public void GivenTriangleWithSides_3_4_5_ThenShouldBeARightTriangle()

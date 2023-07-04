@@ -1,5 +1,5 @@
-﻿using ShapeLibrary.Shapes;
-using ShapeLibrary.Exceptions;
+﻿using ShapeLibrary.Exceptions;
+using ShapeLibrary.Shapes;
 
 namespace ShapeLibrary.Tests
 {

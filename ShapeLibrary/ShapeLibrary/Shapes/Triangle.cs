@@ -33,7 +33,7 @@ namespace ShapeLibrary.Shapes
             CheckSide(length2, nameof(Length2));
             CheckSide(length3, nameof(Length3));
 
-         
+
         }
 
 
